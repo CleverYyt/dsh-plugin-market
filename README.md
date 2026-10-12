@@ -4,7 +4,7 @@
 
 > 数据文件：`registry/all.json`（上架新插件见 `docs/SUBMIT.md`）。
 
-**7855** 个插件 · **7006** 个可一键安装
+**7856** 个插件 · **7007** 个可一键安装
 
 安装市场：
 
@@ -17,7 +17,7 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 
 ## 目录
 
-- [界面与主题](#ui) (1664)
+- [界面与主题](#ui) (1665)
 - [会话与记忆](#session) (1486)
 - [Agent 与工作流](#agent) (1234)
 - [工具与集成](#tools) (834)
@@ -1695,6 +1695,7 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 - [dsh-ocgo-quota](https://github.com/fuzz1og/dsh-ocgo-quota) OpenCode Go usage floating widget for the DeepSeek Harness Web UI: a bottom-right overlay  ⭐ 0 ⬇ 0 · 未验证
 - [dsh-workbench](https://github.com/doebkblcya/dsh-workbench) DSH Web GUI right-side workbench plugin: a VS Code-style single right panel with Files/Git ⭐ 0 ⬇ 0
 - [dsh-settings-mcp-skills](https://github.com/w123456789zy/dsh-settings-mcp-skills) MCP Servers and Skills settings pages for the dsh web UI: mounts the official DeepSeek too ⭐ 0 ⬇ 0
+- [DSH Intelligent UI (IUI)](https://github.com/gulagala001/dsh-intelligent-ui) 让 DSH 回答变成可操作的计算器、图表、表单、清单、模拟与小游戏，支持保存界面状态与会话恢复。 ⭐ 0 ⬇ 0 · 0.2.1-alpha.2.iui.1.0.0
 
 ## 会话与记忆
 

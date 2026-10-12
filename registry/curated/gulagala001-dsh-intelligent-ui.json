@@ -1,0 +1,24 @@
+{
+  "id": "gulagala001-dsh-intelligent-ui",
+  "name": "DSH Intelligent UI (IUI)",
+  "type": "bundle",
+  "repo": "gulagala001/dsh-intelligent-ui",
+  "spec": "https://github.com/gulagala001/dsh-intelligent-ui/releases/download/v0.2.1-alpha.2.iui.1.0.0/dsh-intelligent-ui-0.2.1-alpha.2.iui.1.0.0.tgz",
+  "version": "0.2.1-alpha.2.iui.1.0.0",
+  "description": "让 DSH 回答变成可操作的计算器、图表、表单、清单、模拟与小游戏，支持保存界面状态与会话恢复。",
+  "longDescription": "独立 DSH 插件，沿用现有模型与会话；OMD 为可选增强。此安装资产对应 DSH 0.2.1-alpha.2，Node.js >=22.19。DSH 0.2.0-rc.2 与 0.2.1-alpha.1 请按[完整宿主版本安装表](https://github.com/gulagala001/dsh-intelligent-ui#installation)选择对应 Release。每个 Release 包含 SHA256SUMS.txt 和 compatibility.json。插件与 yunyv/dsh-intelligent-ui 及其 npm 同名包属于不同发布者，请勿合并身份或改用该 npm 包。源码、截图及中文说明：[项目 README](https://github.com/gulagala001/dsh-intelligent-ui#showcase)；[English](https://github.com/gulagala001/dsh-intelligent-ui/blob/main/README_EN.md)。",
+  "tags": [
+    "interactive-ui",
+    "calculators",
+    "charts",
+    "forms",
+    "simulations",
+    "games"
+  ],
+  "category": "ui",
+  "license": "MIT",
+  "author": {
+    "name": "gulagala001",
+    "url": "https://github.com/gulagala001"
+  }
+}

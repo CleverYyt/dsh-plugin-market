@@ -4,7 +4,7 @@
 
 > 数据文件：`registry/all.json`（上架新插件见 `docs/SUBMIT.md`）。
 
-**8246** 个插件 · **7399** 个可一键安装
+**8247** 个插件 · **7400** 个可一键安装
 
 安装市场：
 
@@ -24,7 +24,7 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 - [开发与输入](#dev) (446)
 - [通信与移动](#comm) (276)
 - [安全与权限](#auth) (435)
-- [技能与扩展](#skills) (180)
+- [技能与扩展](#skills) (181)
 - [市场与发现](#market) (549)
 - [趣味与个性](#fun) (101)
 - [其他](#other) (789)
@@ -6859,6 +6859,7 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 - [airesearch-plugin](https://github.com/WOOK98/airesearch-plugin) AIResearch skills for DeepSeek Harness: snapshot, deep dive, morning brief, and SEC filing ⭐ 0 ⬇ 0 · 手动安装
 - [dsh-provision](https://github.com/MoYuSOwO/dsh-provision) Manifest-driven multi-source asset manager for DeepSeek Harness profiles (npm/github/relea ⭐ 0 ⬇ 0 · 未验证 · 手动安装
 - [dsh-understand-anything](https://github.com/GongYuanCaiJi/dsh-understand-anything) 理解任何东西技能包（移植自 Understand-Anything） ⭐ 0 ⬇ 0
+- [视频生成调度](https://github.com/vibe-weaver/media-router-skill) 给文本模型补上出图、出视频的能力，多模型池调度，失败自动降级和熔断，零依赖纯标准库 ⭐ 0 ⬇ 0 · 扩展包 · v1.0.0
 
 ## 市场与发现
 

@@ -17,8 +17,8 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 
 ## 目录
 
-- [界面与主题](#ui) (1741)
-- [会话与记忆](#session) (1568)
+- [界面与主题](#ui) (1742)
+- [会话与记忆](#session) (1567)
 - [Agent 与工作流](#agent) (1288)
 - [工具与集成](#tools) (873)
 - [开发与输入](#dev) (446)
@@ -1244,6 +1244,7 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 - [deepseek-chat](https://github.com/MarSuero/deepseek-chat-obsidian) Obsidian sidebar chat powered by DeepSeek Harness (dsh) ⭐ 1 ⬇ 0 · 未验证 · git clone · v0.1.1
 - [auth-gate](https://github.com/javaxiaov/deepseek-herness-login) Login gate + account settings for the DeepSeek Harness web UI. Host persists account/passw ⭐ 1 ⬇ 0 · 手动安装
 - [dsh-client-ui-m3-theme](https://github.com/DarkskyX15/dsh-client-ui-m3-theme) Material 3 theme plugin for DeepSeek Harness: full M3 token mapping (light/dark palettes w ⭐ 1 ⬇ 0 · 未验证 · 手动安装
+- [dsh-pwa](https://github.com/jackxu925/dsh-pwa) Phone-first PWA for DeepSeek Harness: sessions, streaming chat, approvals on iOS and Andro ⭐ 0 ⬇ 0 · 1.10.2
 - [DSH Background · 多区域背景](https://github.com/flora-ari/dsh-background) 为全局、聊天和侧边栏设置独立图片背景，支持图库轮播、透明度与按比例缩放。 ⭐ 0 ⬇ 0 · v0.1.9
 - [dsh-projects](https://github.com/WenhongPan/dsh-projects) Project and session organization for DeepSeek Harness: multi-folder projects, attention su ⭐ 0 ⬇ 0 · v0.3.0-alpha.1
 - [DSH Intelligent UI (IUI)](https://github.com/gulagala001/dsh-intelligent-ui) 让 DSH 回答变成可操作的计算器、图表、表单、清单、模拟与小游戏，支持保存界面状态与会话恢复。 ⭐ 0 ⬇ 0 · 0.2.1-alpha.2.iui.1.0.0
@@ -2247,7 +2248,6 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 - [dsh-greater-clarity](https://github.com/Baisbt/dsh-GreaterClarity-plugin) DSH Web 会话增强插件：全局折叠 AI 思考链/工具链、一键导出 Markdown、AI 头像与手动折叠（思考链+工具链三态折叠）、设置弹窗。 ⭐ 3 ⬇ 0
 - [dsh-conversation-map](https://github.com/afoxsss/dsh-conversation-map) 会话代码地图：对话区右侧可拖动的会话缩略地图，色块/缩略图双模式，悬停预览、点击跳转、拖动快速滚动 ⭐ 3 ⬇ 0 · v0.1.6
 - [dsh-composer-ux](https://github.com/fangwen9527/dsh-composer-ux) DSH Web 输入体验增强插件：可配置发送/换行键位 + 自定义输入框右键菜单 + 面板尺寸记忆 + 快捷指令（分类 / 跨分类移动 / 关·每次·仅首次三种插入模式 / 存 ~ ⭐ 3 ⬇ 0 · v0.2.0
-- [dsh-pwa](https://github.com/jackxu925/dsh-pwa) Phone-first PWA for DeepSeek Harness: mounts at /m on dsh web and talks to the same /api a ⭐ 3 ⬇ 0 · 手动安装 · v1.10.2
 - [dsh-tool-diff](https://github.com/omdsh-dev/dsh-tool-diff) DSH diff tool: structured comparison of text/JSON/CSV/Markdown plus unified diff generatio ⭐ 3 ⬇ 0 · 手动安装
 - [dsh-skill-studio](https://github.com/zhengjy01/dsh-skill-studio) Skill studio for DeepSeek Harness: visualize all agent skills, view/edit their SKILL.md bo ⭐ 3 ⬇ 0 · v0.2.1
 - [dsh-skill-evolution](https://github.com/VanadisGithub/dsh-skill-evolution) DSH web plugin: event-driven skill self-evolution. Watches agent execution traces, crystal ⭐ 3 ⬇ 0 · 手动安装

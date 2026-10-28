@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-27T11:39:41.773Z",
+  "updatedAt": "2026-10-28T05:21:26.447Z",
   "items": [
     {
       "id": "rea-agents",
@@ -201943,38 +201943,6 @@
       "category": "auth"
     },
     {
-      "id": "gulagala001-dsh-persona-plugin",
-      "name": "@gulagala001/dsh-persona-plugin",
-      "type": "bundle",
-      "package": "@gulagala001/dsh-persona-plugin",
-      "repo": "gulagala001/dsh-persona-plugin",
-      "githubId": 1429682818,
-      "spec": "github:gulagala001/dsh-persona-plugin#v0.2.0-dsh.0.2.1-rc.3",
-      "version": "v0.2.0-dsh.0.2.1-rc.3",
-      "releaseCheckedAt": "2026-10-26T10:19:43.857Z",
-      "author": {
-        "name": "gulagala001",
-        "url": "https://github.com/gulagala001"
-      },
-      "description": "Create, import and manage AI personalities with global and per-conversation choices in DeepSeek Harness.",
-      "tags": [
-        "dsh-bundle"
-      ],
-      "license": "MIT",
-      "downloads": 419,
-      "stars": 1,
-      "releasedAt": "2026-10-25T17:56:09Z",
-      "topicSourced": false,
-      "verified": true,
-      "install": {
-        "method": "manual",
-        "source": "readme"
-      },
-      "source": "auto",
-      "auto": true,
-      "category": "fun"
-    },
-    {
       "id": "dsh-violet-heart",
       "name": "dsh-violet-heart",
       "type": "bundle",
@@ -202830,40 +202798,6 @@
       "source": "auto",
       "auto": true,
       "category": "session"
-    },
-    {
-      "id": "gulagala001-dsh-btw",
-      "name": "@gulagala001/dsh-btw",
-      "type": "bundle",
-      "package": "@gulagala001/dsh-btw",
-      "repo": "gulagala001/dsh-btw",
-      "githubId": 1427123471,
-      "spec": "github:gulagala001/dsh-btw#v0.1.4-dsh.0.2.1-rc.3",
-      "version": "v0.1.4-dsh.0.2.1-rc.3",
-      "releaseCheckedAt": "2026-10-24T09:44:52.661Z",
-      "author": {
-        "name": "gulagala001",
-        "url": "https://github.com/gulagala001"
-      },
-      "description": "Ask side questions in DeepSeek Harness without interrupting the current task.",
-      "tags": [
-        "btw",
-        "dsh-bundle",
-        "prompt-caching"
-      ],
-      "license": "MIT",
-      "downloads": 130,
-      "stars": 1,
-      "releasedAt": "2026-10-24T06:23:42Z",
-      "topicSourced": false,
-      "verified": true,
-      "install": {
-        "method": "manual",
-        "source": "readme"
-      },
-      "source": "auto",
-      "auto": true,
-      "category": "agent"
     },
     {
       "id": "gulagala001-dsh-undo-plugin",
@@ -212423,38 +212357,6 @@
       "verified": true,
       "install": {
         "method": "dsh-plugin-add",
-        "source": "readme"
-      },
-      "source": "auto",
-      "auto": true,
-      "category": "skills"
-    },
-    {
-      "id": "dsh-extensions",
-      "name": "dsh-extensions",
-      "type": "bundle",
-      "package": "dsh-extensions",
-      "repo": "gulagala001/dsh-extensions",
-      "githubId": 1429682710,
-      "spec": "github:gulagala001/dsh-extensions#v0.1.2-dsh.0.2.1-rc.3",
-      "version": "v0.1.2-dsh.0.2.1-rc.3",
-      "releaseCheckedAt": "2026-10-25T10:58:27.301Z",
-      "author": {
-        "name": "gulagala001",
-        "url": "https://github.com/gulagala001"
-      },
-      "description": "在 DSH 插件页管理 Skill、MCP 服务器、指令文件、自定义命令和 Hooks。",
-      "tags": [
-        "dsh-bundle"
-      ],
-      "license": "MIT",
-      "downloads": 118,
-      "stars": 1,
-      "releasedAt": "2026-10-24T06:24:38Z",
-      "topicSourced": false,
-      "verified": true,
-      "install": {
-        "method": "manual",
         "source": "readme"
       },
       "source": "auto",
@@ -227929,6 +227831,79 @@
       "status": "unavailable"
     },
     {
+      "id": "gulagala001-dsh-persona-plugin",
+      "name": "dsh-persona-plugin",
+      "type": "bundle",
+      "repo": "gulagala001/dsh-persona-plugin",
+      "spec": "https://github.com/gulagala001/dsh-persona-plugin/releases/download/v0.1.2-dsh.0.2.1-rc.3/gulagala001-dsh-persona-plugin-0.1.2-dsh.0.2.1-rc.3.tgz",
+      "description": "创建、导入和管理人格预设，支持全局与单会话选择。",
+      "longDescription": "Create and manage personality presets with global and per-conversation choices. Exact DSH 0.2.1-rc.3; Node.js 22.19+. See README for usage and permissions.",
+      "tags": [
+        "persona",
+        "personality"
+      ],
+      "category": "agent",
+      "license": "MIT",
+      "author": {
+        "name": "gulagala001",
+        "url": "https://github.com/gulagala001"
+      },
+      "source": "curated",
+      "verified": true,
+      "install": {
+        "method": "dsh-plugin-add"
+      }
+    },
+    {
+      "id": "gulagala001-dsh-btw",
+      "name": "DSH BTW",
+      "type": "bundle",
+      "repo": "gulagala001/dsh-btw",
+      "spec": "https://github.com/gulagala001/dsh-btw/releases/download/v0.1.0-dsh.0.2.1-rc.2/gulagala001-dsh-btw-0.1.0-dsh.0.2.1-rc.2.tgz",
+      "description": "在主输入框上方使用原生弹窗，借助当前会话上下文进行旁聊与追问，主任务可继续运行。",
+      "longDescription": "The sole entry point is `/btw`. Native history and follow-up controls stay above the main composer. It preserves the main request prefix and cache affinity for possible provider cache reuse. Side requests do not execute tools or append to the main conversation. The latest 20 side exchanges per main conversation live only in this window memory and disappear on reload. It uses the existing model provider with normal provider usage charges; actual cache hits depend on the provider.\n\nTargets DeepSeek Harness 0.2.1-rc.2 exactly, Cordis 4.0.5 and Node.js 22.19+. Verified on macOS with the real release runtime in an isolated native DSH Web profile: package installation, /btw entry, native popover/history/follow-up interactions, independent cancellation and main-conversation preservation. Four focused tests and the main/tag CI passed. Windows, Linux and Electron desktop device flows have not been tested. Cache reuse preserves the main request prefix and provider affinity, but actual cache hits depend on the provider.",
+      "tags": [
+        "btw",
+        "side-chat",
+        "conversation"
+      ],
+      "category": "session",
+      "license": "MIT",
+      "author": {
+        "name": "gulagala001",
+        "url": "https://github.com/gulagala001"
+      },
+      "source": "curated",
+      "verified": true,
+      "install": {
+        "method": "dsh-plugin-add"
+      }
+    },
+    {
+      "id": "gulagala001-dsh-extensions",
+      "name": "dsh-extensions",
+      "type": "bundle",
+      "repo": "gulagala001/dsh-extensions",
+      "spec": "https://github.com/gulagala001/dsh-extensions/releases/download/v0.1.2-dsh.0.2.1-rc.3/dsh-extensions-0.1.2-dsh.0.2.1-rc.3.tgz",
+      "description": "在 DSH 插件页管理 Skill、MCP 服务器、指令文件、自定义命令和 Hooks。",
+      "longDescription": "Manage skills, MCP servers, instruction files, custom commands and hooks. Exact DSH 0.2.1-rc.3; Node.js 22.19+. See README for usage and permissions.",
+      "tags": [
+        "extensions",
+        "skills"
+      ],
+      "category": "skills",
+      "license": "MIT",
+      "author": {
+        "name": "gulagala001",
+        "url": "https://github.com/gulagala001"
+      },
+      "source": "curated",
+      "verified": true,
+      "install": {
+        "method": "dsh-plugin-add"
+      }
+    },
+    {
       "id": "demo-hello",
       "name": "Demo Hello Skill",
       "type": "pack",
@@ -227992,8 +227967,8 @@
         "presets": []
       },
       "category": "skills",
-      "verified": true,
       "source": "curated",
+      "verified": true,
       "install": {
         "method": "pack"
       }
@@ -228018,7 +227993,8 @@
         "obj",
         "stl",
         "step",
-        "cad"
+        "cad",
+        "llm"
       ],
       "category": "tools",
       "source": "curated",
@@ -228050,8 +228026,8 @@
         "name": "LFY-bot",
         "url": "https://github.com/LFY-bot"
       },
-      "verified": true,
       "source": "curated",
+      "verified": true,
       "install": {
         "method": "dsh-plugin-add"
       }
@@ -228079,8 +228055,8 @@
         "gemini",
         "copilot"
       ],
-      "verified": true,
       "source": "curated",
+      "verified": true,
       "install": {
         "method": "dsh-plugin-add"
       }
@@ -228241,8 +228217,8 @@
         "name": "chenzhi-clude",
         "url": "https://github.com/chenzhi-clude"
       },
-      "verified": true,
       "source": "curated",
+      "verified": true,
       "install": {
         "method": "dsh-plugin-add"
       }
@@ -228262,6 +228238,7 @@
       "version": "v0.2.4",
       "longDescription": " pi、opencode、codex、claude-code 的会话、聊天记录与 agent 导入 DeepSeek Harness（dsh）。导入的会话出现在会话列表，可携带完整上下文继续对话；自定义 agent 与模式提示词变成可发现的 dsh skills；composer 里的一键 同步 按钮即可完成全部导入。",
       "tags": [
+        "agents",
         "codex",
         "claude",
         "opencode",
@@ -228269,8 +228246,8 @@
       ],
       "package": "dsh-import-agents",
       "category": "session",
-      "verified": true,
       "source": "curated",
+      "verified": true,
       "install": {
         "method": "dsh-plugin-add"
       }
@@ -228427,8 +228404,8 @@
         "name": "MengYuil",
         "url": "https://github.com/MengYuil"
       },
-      "verified": true,
       "source": "curated",
+      "verified": true,
       "install": {
         "method": "dsh-plugin-add"
       }
@@ -228459,8 +228436,8 @@
       ],
       "package": "dsh-projects",
       "category": "ui",
-      "verified": true,
       "source": "curated",
+      "verified": true,
       "install": {
         "method": "dsh-plugin-add"
       }
@@ -228534,8 +228511,8 @@
         "name": "gulagala001",
         "url": "https://github.com/gulagala001"
       },
-      "verified": true,
       "source": "curated",
+      "verified": true,
       "install": {
         "method": "dsh-plugin-add"
       }
@@ -228586,8 +228563,8 @@
         "name": "klarkxy",
         "url": "https://github.com/klarkxy"
       },
-      "verified": true,
       "source": "curated",
+      "verified": true,
       "install": {
         "method": "dsh-plugin-add"
       }
@@ -228597,14 +228574,14 @@
       "name": "图片/视频生成调度",
       "type": "pack",
       "repo": "vibe-weaver/media-router-skill",
-      "spec": "https://github.com/vibe-weaver/media-router-skill/releases/download/v1.0.0/media-router-skill-v1.0.0.zip",
+      "spec": "https://github.com/vibe-weaver/media-router-skill/releases/download/v1.2.0/media-router-skill-v1.2.0.zip",
       "description": "给文本模型补上出图、出视频的能力，多模型池调度，失败自动降级和熔断，零依赖纯标准库",
       "license": "MIT",
       "author": {
         "name": "vibe-weaver",
         "url": "https://github.com/vibe-weaver/"
       },
-      "version": "v1.0.0",
+      "version": "v1.2.0",
       "longDescription": "文本模型遇到「生成一张图」「做个视频」这类步骤时只会说「我做不到」，任务就断在那里。media-router 用一个你自己维护的多模型池把这一步接上：挑模型、调接口、下载产物，再把产物路径和文字描述交回给文本模型，原任务继续往下走。\n\n模型池写在 `config/models.yaml`，两个字段决定路由：`priority` 是优先级档位，数值越小越优先；`weight` 是同档内的权重，50 和 30 就是 5:3 的出手比例。想让某个模型永远优先就分开档位，想分摊流量就同档配权重。\n\n调用失败自动换下一个候选，缺密钥的模型直接跳过、不占重试次数；同一模型连续失败到阈值（默认 3 次）进入冷却，成功后计数清零。出厂配置的图片池和视频池各带一条 `native` 兜底，真模型全不可用时返回「请调用内置 ImageGen / VideoGen」的委托指令，没配 Key 也不会卡死。\n\n需要 Python 3.8+，零第三方依赖。在 DSH 里可以直接从插件市场一键安装，装完落在 `~/.agents/skills/media-router/`，新开一个会话就能用；手动安装则把目录复制到 agent 的 skills 目录并改名为 `media-router`（`~/.dsh/skills/`、`~/.claude/skills/`、`~/.codex/skills/`）。\n\n不想手写 YAML 就开网页配置台，配厂商、粘 Key、拖权重滑块，点「测试连通性」验密钥不花钱：\n\n```bash\npython3 scripts/media_router.py web\n```\n\n习惯命令行的走这条：\n\n```bash\npython3 scripts/media_router.py list --pretty\nexport ARK_API_KEY=\"你的-key\"\npython3 scripts/media_router.py generate --kind image --prompt \"一只戴圆框眼镜的橘猫\"\n```\n\n返回的 JSON 里 `files[0].path` 就是产物的绝对路径。密钥存在 `config/secrets.yaml`，已在 `.gitignore` 里，不会进版本库。\n\n完整文档：https://github.com/vibe-weaver/media-router-skill",
       "tags": [
         "文生图",
@@ -228633,14 +228610,14 @@
       "name": "赛博木鱼",
       "type": "bundle",
       "repo": "TongY1n/ui-muyu",
-      "spec": "https://github.com/TongY1n/ui-muyu/releases/download/v0.1.2/deepseek-ai-dsh-client-ui-muyu-0.1.2.tgz",
+      "spec": "https://github.com/TongY1n/ui-muyu/releases/download/v0.1.4/deepseek-ai-dsh-client-ui-muyu-0.1.4.tgz",
       "description": "一个赛博木鱼：可拖拽、点击敲击、累积功德的 Web 悬浮小摆件",
       "license": "MIT",
       "author": {
         "name": "TongY1n",
         "url": "https://github.com/TongY1n"
       },
-      "version": "0.1.2",
+      "version": "0.1.4",
       "category": "fun",
       "tags": [
         "fun",
@@ -228649,8 +228626,8 @@
         "merit"
       ],
       "longDescription": "工作间隙敲一敲、攒一攒\"功德\"。\n\n点击木鱼即敲击，鼠标按住木鱼移动可随意拖拽，刷新页面不丢进度，其他的留给大家自由探索～",
-      "verified": true,
       "source": "curated",
+      "verified": true,
       "install": {
         "method": "dsh-plugin-add"
       }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-28T05:21:26.447Z",
+  "updatedAt": "2026-10-28T08:40:25.737Z",
   "items": [
     {
       "id": "rea-agents",
@@ -202800,41 +202800,6 @@
       "category": "session"
     },
     {
-      "id": "gulagala001-dsh-undo-plugin",
-      "name": "@gulagala001/dsh-undo-plugin",
-      "type": "bundle",
-      "package": "@gulagala001/dsh-undo-plugin",
-      "repo": "gulagala001/dsh-undo-plugin",
-      "githubId": 1426949428,
-      "spec": "github:gulagala001/dsh-undo-plugin#v0.1.5-dsh.0.2.1-rc.3",
-      "version": "v0.1.5-dsh.0.2.1-rc.3",
-      "releaseCheckedAt": "2026-10-25T10:39:53.527Z",
-      "author": {
-        "name": "gulagala001",
-        "url": "https://github.com/gulagala001"
-      },
-      "description": "Rewind conversations and workspace files in DeepSeek Harness, with undo.",
-      "tags": [
-        "checkpoint",
-        "dsh-bundle",
-        "rewind",
-        "undo"
-      ],
-      "license": "MIT",
-      "downloads": 242,
-      "stars": 1,
-      "releasedAt": "2026-10-24T13:38:27Z",
-      "topicSourced": false,
-      "verified": true,
-      "install": {
-        "method": "manual",
-        "source": "readme"
-      },
-      "source": "auto",
-      "auto": true,
-      "category": "tools"
-    },
-    {
       "id": "dsh-session-shield",
       "name": "dsh-session-shield",
       "type": "bundle",
@@ -213268,41 +213233,6 @@
       "downloads": 0,
       "stars": 1,
       "releasedAt": "2026-10-13T02:41:27Z",
-      "topicSourced": false,
-      "verified": true,
-      "install": {
-        "method": "manual",
-        "source": "readme"
-      },
-      "source": "auto",
-      "auto": true,
-      "category": "agent"
-    },
-    {
-      "id": "dsh-workflow-plus",
-      "name": "dsh-workflow-plus",
-      "type": "bundle",
-      "package": "dsh-workflow-plus",
-      "repo": "gulagala001/dsh-workflow",
-      "githubId": 1426667521,
-      "spec": "github:gulagala001/dsh-workflow#v0.1.5-dsh.0.2.1-rc.3",
-      "version": "v0.1.5-dsh.0.2.1-rc.3",
-      "releaseCheckedAt": "2026-10-24T10:23:51.461Z",
-      "author": {
-        "name": "gulagala001",
-        "url": "https://github.com/gulagala001"
-      },
-      "description": "Resumable JavaScript workflows, native subagents, token budgets and worktree isolation for DeepSeek Harness.",
-      "tags": [
-        "agent-orchestration",
-        "cordis-plugin",
-        "dsh-bundle",
-        "workflow"
-      ],
-      "license": "MIT",
-      "downloads": 178,
-      "stars": 1,
-      "releasedAt": "2026-10-24T06:23:24Z",
       "topicSourced": false,
       "verified": true,
       "install": {
@@ -227829,6 +227759,59 @@
         "source": "readme"
       },
       "status": "unavailable"
+    },
+    {
+      "id": "gulagala001-dsh-undo-plugin",
+      "name": "dsh-undo-plugin",
+      "type": "bundle",
+      "repo": "gulagala001/dsh-undo-plugin",
+      "spec": "https://github.com/gulagala001/dsh-undo-plugin/releases/download/v0.1.0-dsh.0.2.1-rc.2/gulagala001-dsh-undo-plugin-0.1.0-dsh.0.2.1-rc.2.tgz",
+      "description": "对话与工作区文件原地撤回，支持确认和撤销撤回。",
+      "category": "session",
+      "tags": [
+        "undo",
+        "rewind",
+        "checkpoint"
+      ],
+      "license": "MIT",
+      "author": {
+        "name": "gulagala001",
+        "url": "https://github.com/gulagala001"
+      },
+      "source": "curated",
+      "verified": true,
+      "install": {
+        "method": "dsh-plugin-add"
+      }
+    },
+    {
+      "id": "gulagala001-dsh-workflow",
+      "name": "DSH Workflow",
+      "type": "bundle",
+      "repo": "gulagala001/dsh-workflow",
+      "spec": "https://github.com/gulagala001/dsh-workflow/releases/download/v0.1.1-dsh.0.2.1-rc.2/dsh-workflow-plus-0.1.1-dsh.0.2.1-rc.2.tgz",
+      "version": "0.1.1-dsh.0.2.1-rc.2",
+      "description": "为 DSH 提供可恢复的 JavaScript 工作流、原生子智能体、嵌套调用、token 预算和 worktree 隔离。",
+      "longDescription": "包名 dsh-workflow-plus，MIT 许可；仅支持 DSH 0.2.1-rc.2、Node.js >=22.19。通过固定 GitHub Release tgz 安装，未发布 npm。已在真实 DSH 宿主完成原生子智能体、嵌套工作流与恢复运行验证。安装与兼容范围见[项目说明](https://github.com/gulagala001/dsh-workflow)。",
+      "tags": [
+        "workflow",
+        "subagents",
+        "resumable",
+        "orchestration",
+        "token-budget",
+        "worktree"
+      ],
+      "category": "agent",
+      "license": "MIT",
+      "author": {
+        "name": "gulagala001",
+        "url": "https://github.com/gulagala001"
+      },
+      "source": "curated",
+      "verified": true,
+      "install": {
+        "method": "dsh-plugin-add"
+      }
     },
     {
       "id": "gulagala001-dsh-persona-plugin",
@@ -348933,6 +348916,33 @@
         "command": "git clone --recurse-submodules"
       },
       "githubId": 1334418427
+    },
+    {
+      "id": "dsh-plugin-agent-groups",
+      "name": "dsh-plugin-agent-groups",
+      "type": "bundle",
+      "repo": "flowfire/dsh-plugin-agent-groups",
+      "spec": "github:flowfire/dsh-plugin-agent-groups#v0.1.1",
+      "description": "Relay final outputs between multiple live DSH sessions in one collaboration group.",
+      "longDescription": "把多个已打开的 DSH 会话组织成一个协作群：成员保留各自的上下文与角色设定，插件只采集每轮结束后的最终输出，按时间线排队，再合并投递。\n\n- 不手工转发，不插入打断正在运行的会话；\n- 成员忙时消息累积，空闲后一次性收到合并结果；\n- 只转发最终结论，工具调用与中间过程不会进入时间线；\n- 成员可输出【静默】跳过本轮，或输出【退出会话】离群；\n- 右侧栏可固定查看群时间线。",
+      "category": "agent",
+      "license": "MIT",
+      "author": {
+        "name": "flowfire",
+        "url": "https://github.com/flowfire"
+      },
+      "version": "0.1.1",
+      "tags": [
+        "multi-agent",
+        "collaboration",
+        "sessions",
+        "timeline"
+      ],
+      "source": "curated",
+      "verified": true,
+      "install": {
+        "method": "dsh-plugin-add"
+      }
     }
   ]
 }

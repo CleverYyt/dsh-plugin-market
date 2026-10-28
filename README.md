@@ -4,7 +4,7 @@
 
 > 数据文件：`registry/all.json`（上架新插件见 `docs/SUBMIT.md`）。
 
-**10547** 个插件 · **9679** 个可一键安装
+**10548** 个插件 · **9680** 个可一键安装
 
 安装市场：
 
@@ -18,9 +18,9 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 ## 目录
 
 - [界面与主题](#ui) (2280)
-- [会话与记忆](#session) (2074)
-- [Agent 与工作流](#agent) (1561)
-- [工具与集成](#tools) (1089)
+- [会话与记忆](#session) (2075)
+- [Agent 与工作流](#agent) (1562)
+- [工具与集成](#tools) (1088)
 - [开发与输入](#dev) (582)
 - [通信与移动](#comm) (360)
 - [安全与权限](#auth) (528)
@@ -3632,6 +3632,7 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 - [dsh-goodmemory](https://github.com/hjqcan/dsh-goodmemory) Automatic cross-session GoodMemory recall and writeback for DeepSeek Harness ⭐ 1 ⬇ 0 · 手动安装 · v0.1.0
 - [LiuHe](https://github.com/wulun811/LiuHe) LLM-native code toolkit: Rust multi-language parser (tree-sitter) + 44 MCP tools for atomi ⭐ 1 ⬇ 0 · 未验证 · 手动安装
 - [dsh-feishu-bridge](https://github.com/21hbguo/dsh-feishu-bridge-plugin) 飞书机器人 ↔ DSH 对话桥：进程内驱动 DSH 会话，流式卡片回复 ⭐ 1 ⬇ 0 · 未验证 · 官方脚本安装 · v0.0.2
+- [dsh-undo-plugin](https://github.com/gulagala001/dsh-undo-plugin) 对话与工作区文件原地撤回，支持确认和撤销撤回。 ⭐ 0 ⬇ 0
 - [DSH BTW](https://github.com/gulagala001/dsh-btw) 在主输入框上方使用原生弹窗，借助当前会话上下文进行旁聊与追问，主任务可继续运行。 ⭐ 0 ⬇ 0
 - [dsh-import-agents](https://github.com/Chang-Tong/dsh-import-agents)  pi、opencode、codex、claude-code 的会话、聊天记录与 agent 导入 DeepSeek Harness（dsh）。导入的会话出现在会话列表，可携带完整 ⭐ 0 ⬇ 0 · v0.2.4
 - [dsh-web-search-clinepass](https://github.com/qujinting/dsh-web-search-clinepass) DSH plugin (dsh 0.1.5, 0.1.7+, and 0.2.0): a ctx.web search provider that searches with th ⭐ 0 ⬇ 0 · 手动安装
@@ -5410,7 +5411,6 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 - [dsh-page-monitor](https://github.com/bushizhanghan/dsh-page-monitor) Webpage watch agent for DeepSeek Harness: track a watchlist of URLs, take snapshots, detec ⭐ 1 ⬇ 0
 - [dsh-codex-mcp](https://github.com/GEB-lab/dsh-codex-mcp) MCP bridge for DSH: a loopback Streamable HTTP MCP server inside DeepSeek Harness that let ⭐ 1 ⬇ 526 · 手动安装 · v0.1.1
 - [dsh-paper-gogo-plugin](https://github.com/gqallen931/paper-gogo-plugin) Expose the Paper-gogo evidence-first paper workflow (18 Phase, G0-G6 gates, four-state evi ⭐ 1 ⬇ 0 · 手动安装
-- [dsh-workflow-plus](https://github.com/gulagala001/dsh-workflow) Resumable JavaScript workflows, native subagents, token budgets and worktree isolation for ⭐ 1 ⬇ 178 · 手动安装 · v0.1.5-dsh.0.2.1-rc.3
 - [dsh-flock](https://github.com/Hercules-debug/dsh-flock) Self-organizing multi-agent clusters for DeepSeek Harness: N agents coordinate through a s ⭐ 1 ⬇ 0 · 手动安装
 - [fullstack-expert](https://github.com/heyadhithya/fullstack-expert) Cordis-native, evidence-driven full-stack engineering discipline for DeepSeek Harness agen ⭐ 1 ⬇ 0 · 手动安装 · v0.1.1
 - [dsh-step-governor](https://github.com/JiewiW/dsh-step-governor) 确定性步数治理——agent/pre-step reject 步级熔断与 tools/pre-execute deny 支线熔断（shadow 先行，fail-open） ⭐ 1 ⬇ 1 · v0.2.1
@@ -5492,6 +5492,7 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 - [dsh-answer-sound](https://github.com/zl99103/dsh-answer-sound) Agent answer sound effects for DeepSeek Harness web: play start/done/error tones on answer ⭐ 1 ⬇ 0
 - [dsh-win-fable-report](https://github.com/L-xx1/dsh-win-fable-report) Fable级且及时总结模式：基于 dsh-anchored-standard 的 Windows 工具调用增强 agent preset ⭐ 1 ⬇ 0 · 未验证 · git clone
 - [ag-dsh-coding-plugins](https://github.com/AlphaGodzilla/ag-dsh-coding-plugins) DeepSeek Harness (DSH) coding-plugins monorepo: independent TypeScript plugin packages und ⭐ 1 ⬇ 0 · 未验证 · 手动安装
+- [DSH Workflow](https://github.com/gulagala001/dsh-workflow) 为 DSH 提供可恢复的 JavaScript 工作流、原生子智能体、嵌套调用、token 预算和 worktree 隔离。 ⭐ 0 ⬇ 0 · 0.1.1-dsh.0.2.1-rc.2
 - [dsh-persona-plugin](https://github.com/gulagala001/dsh-persona-plugin) 创建、导入和管理人格预设，支持全局与单会话选择。 ⭐ 0 ⬇ 0
 - [dsh-auto-review](https://github.com/PerryLink/dsh-auto-review) Second-model AI auto-review on the DSH approval chain: a read-only reviewer subagent retur ⭐ 0 ⬇ 0
 - [dsh-hooks-pack](https://github.com/chenzhi-clude/dsh-hooks-pack) One-click Claude Code & Codex hooks for DeepSeek Harness: auto-discovers your existing ~/. ⭐ 0 ⬇ 0
@@ -5952,6 +5953,7 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 - [dsh-scientific](https://github.com/Hongcheng-LI/dsh-scientific) Scientific computing plugin suite for DeepSeek Harness: literature (Zotero), molecular doc ⭐ 0 ⬇ 0 · 未验证
 - [dsh-okx-skill-hub](https://github.com/kongyecn-wq/dsh-okx-skill-hub) OKX agent-skills 官方技能适配 DeepSeek Harness (DSH) 技能库：skills 目录 + dsh-plugin 双通道安装 ⭐ 0 ⬇ 0
 - [challenge-project-methodology](https://github.com/hlxstc-create/challenge-project-methodology) A battle-tested methodology for high-difficulty AI-agent projects: grading gates, evidence ⭐ 0 ⬇ 0 · 未验证 · 手动安装
+- [dsh-plugin-agent-groups](https://github.com/flowfire/dsh-plugin-agent-groups) Relay final outputs between multiple live DSH sessions in one collaboration group. ⭐ 0 ⬇ 0 · 0.1.1
 
 ## 工具与集成
 
@@ -6551,7 +6553,6 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 - [dsh-gearbox](https://github.com/ctianye/dsh-gearbox) Gearbox for DeepSeek Harness: reasoning-effort presets for third-party models (Effort Stud ⭐ 1 ⬇ 0 · 手动安装
 - [dsh-peakrate](https://github.com/log-li/dsh-peakrate) Peak / off-peak rate badges and switch countdown for DeepSeek Harness — per provider, per  ⭐ 1 ⬇ 0 · 手动安装 · v0.3.1
 - [dsh-input-rewriter](https://github.com/feiertu/dsh-input-rewriter) DeepSeek Harness 插件：发送前用提示词工程 playbook 自动改写用户输入为更优 prompt。官方 bundle 插件，dsh plugin --profil ⭐ 1 ⬇ 0
-- [dsh-undo-plugin](https://github.com/gulagala001/dsh-undo-plugin) Rewind conversations and workspace files in DeepSeek Harness, with undo. ⭐ 1 ⬇ 242 · 手动安装 · v0.1.5-dsh.0.2.1-rc.3
 - [dsh-preset-switcher](https://github.com/neutronslime/dsh-preset-switcher-fork) DSH web plugin: switch the current session's agent preset (mode) at any time, even after t ⭐ 1 ⬇ 0
 - [dsh-knowledge-lite](https://github.com/fangqiing/dsh-knowledge-lite) 本地知识库插件 for DeepSeek Harness (dsh)：每篇一个 Markdown 文件，支持全文搜索、标签、层级目录、附件与 Office 文本抽取。 ⭐ 1 ⬇ 0 · git clone
 - [dsh-kb-lite](https://github.com/imaused/dsh-kb-lite) Local knowledge base for DeepSeek Harness: five host-only tools to ingest Markdown, plain  ⭐ 1 ⬇ 0

@@ -417,6 +417,8 @@ window.__ModuleLoader__.load({
 
     const PAGE_SIZE = 12
     const BORDER = 'var(--dsw-alias-border-l2)'
+    // brand-primary 在暗色主题是近白色，文字不能写死 #fff；用宿主主按钮同款前景色
+    const ON_BRAND = 'var(--dsw-alias-label-primary-foreground, var(--dsw-alias-brand-primary-invert, #fff))'
 
     const CSS = `
 .dshm-root { display:flex; flex-direction:column; gap:8px; font-size:13px; color:var(--dsw-alias-label-primary); width:100%; max-width:none; }
@@ -439,7 +441,7 @@ window.__ModuleLoader__.load({
 .dshm-viewseg { display:flex; gap:10px; }
 .dshm-viewbtn { display:inline-flex; align-items:center; gap:6px; border:1px solid ${BORDER}; background:transparent; color:var(--dsw-alias-label-secondary); font:inherit; font-size:13px; font-weight:500; padding:6px 16px; border-radius:10px; cursor:pointer; }
 .dshm-viewbtn:hover { color:var(--dsw-alias-label-primary); }
-.dshm-viewbtn.on { background:var(--dsw-alias-brand-primary); border-color:var(--dsw-alias-brand-primary); color:#fff; font-weight:600; }
+.dshm-viewbtn.on { background:var(--dsw-alias-brand-primary); border-color:var(--dsw-alias-brand-primary); color:${ON_BRAND}; font-weight:600; }
 .dshm-toolbar { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; align-items:center; }
 .dshm-searchwrap { position:relative; min-width:0; }
 .dshm-search { width:100%; box-sizing:border-box; padding:8px 30px 8px 12px; border:1px solid ${BORDER}; border-radius:10px; background:var(--dsw-alias-bg-layer-2); color:var(--dsw-alias-label-primary); font-size:14px; }
@@ -452,11 +454,11 @@ window.__ModuleLoader__.load({
 .dshm-seg { display:flex; gap:10px; flex-wrap:wrap; }
 .dshm-seg-btn { display:inline-flex; align-items:center; gap:6px; border:1px solid ${BORDER}; background:transparent; color:var(--dsw-alias-label-secondary); font:inherit; font-size:12.5px; font-weight:500; padding:5px 14px; border-radius:10px; cursor:pointer; }
 .dshm-seg-btn:hover { color:var(--dsw-alias-label-primary); }
-.dshm-seg-btn.on { background:var(--dsw-alias-brand-primary); border-color:var(--dsw-alias-brand-primary); color:#fff; font-weight:600; }
+.dshm-seg-btn.on { background:var(--dsw-alias-brand-primary); border-color:var(--dsw-alias-brand-primary); color:${ON_BRAND}; font-weight:600; }
 .dshm-cats { display:flex; gap:6px; flex-wrap:wrap; }
 .dshm-chip { border:1px solid ${BORDER}; background:transparent; color:var(--dsw-alias-label-secondary); font:inherit; font-size:12px; padding:3px 11px; border-radius:999px; cursor:pointer; }
 .dshm-chip:hover { color:var(--dsw-alias-label-primary); border-color:var(--dsw-alias-brand-primary); }
-.dshm-chip.on { background:var(--dsw-alias-brand-primary); border-color:var(--dsw-alias-brand-primary); color:#fff; }
+.dshm-chip.on { background:var(--dsw-alias-brand-primary); border-color:var(--dsw-alias-brand-primary); color:${ON_BRAND}; }
 .dshm-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px; align-content:start; }
 .dshm-card { display:flex; flex-direction:column; gap:10px; padding:16px; border:1px solid ${BORDER}; border-radius:12px; background:var(--dsw-alias-bg-base); transition:border-color 120ms ease, transform 120ms ease; }
 .dshm-card:hover { border-color:var(--dsw-alias-border-l2); transform:translateY(-2px); }
@@ -482,7 +484,7 @@ window.__ModuleLoader__.load({
 .dshm-card-actions { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
 .dshm-btn { display:inline-flex; align-items:center; gap:6px; flex:none; white-space:nowrap; padding:7px 16px; border-radius:12px; border:none; background:var(--dsw-alias-button-elevated-fill); color:var(--dsw-alias-label-primary); font:inherit; font-size:14px; font-weight:500; cursor:pointer; text-decoration:none; }
 .dshm-btn:hover { background:var(--dsw-alias-button-floating-hover); }
-.dshm-btn-primary { background:var(--dsw-alias-brand-primary); color:#fff; }
+.dshm-btn-primary { background:var(--dsw-alias-brand-primary); color:${ON_BRAND}; }
 .dshm-btn-primary:hover { opacity:0.92; }
 .dshm-btn-warn { background:transparent; color:var(--dsw-alias-state-warn-primary); border:1px solid var(--dsw-alias-state-warn-primary); }
 .dshm-btn-warn:hover { background:color-mix(in srgb, var(--dsw-alias-state-warn-primary) 14%, transparent); }

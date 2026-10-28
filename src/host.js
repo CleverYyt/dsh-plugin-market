@@ -373,6 +373,8 @@ async function performInstall(args, job) {
       return finishJob(job, { status: 'error', error: '该插件的安装方式未经项目 README 核实，已阻止一键安装。请打开详情按 README 操作' })
     }
     // 点击安装即授权：预先放行构建脚本，避免 pnpm 拦截一轮
+    // 记下装前的依赖，装完对比出真实包名（registry 条目常缺 package 字段，卸载要靠它）
+    const depsBefore = new Set(Object.keys(((await readProfileManifest()) || {}).dependencies || {}))
     appendJobLine(job, '正在预放行构建脚本（pnpm allowBuilds）…')
     try { await allowBuild() } catch {}
     let r = await runShellLogged(job, 'dsh plugin --profile web add ' + q(args.spec), 300000, { fullAccess: true })
@@ -408,7 +410,8 @@ async function performInstall(args, job) {
     }
     // 自动迁移：若同名包存在于其他 profile，从中移除，避免“装了却不生效”
     const migratedFrom = []
-    const pkgName = typeof args.package === 'string' && args.package ? args.package : null
+    const added = Object.keys(((await readProfileManifest()) || {}).dependencies || {}).filter((k) => !depsBefore.has(k))
+    const pkgName = typeof args.package === 'string' && args.package ? args.package : (added.length === 1 ? added[0] : null)
     if (pkgName) {
       const otherMap = await otherProfileMap()
       for (const prof of (otherMap.get(pkgName) || [])) {
@@ -520,8 +523,8 @@ async function performUninstall(args, job) {
     if (!res.ok) return finishJob(job, { status: 'error', error: res.error })
     delete installed[args.id]
     await writeState({ installed })
-    const where = res.cleaned.length > 0 ? res.cleaned.join(', ') : 'web'
-    return finishJob(job, { status: 'done', message: '已从 ' + where + ' 卸载 ' + name + '，重启 dsh 后生效' })
+    if (res.cleaned.length === 0) return finishJob(job, { status: 'done', message: '没在任何 profile 里找到 ' + name + '，已清除市场里的安装记录' })
+    return finishJob(job, { status: 'done', message: '已从 ' + res.cleaned.join(', ') + ' 卸载 ' + name + '，重启 dsh 后生效' })
   }
   if (rec.type === 'pack') {
     const root = rec.kind === 'preset' ? PRESETS_ROOT : SKILLS_ROOT
@@ -561,8 +564,8 @@ async function performRemove(args, job) {
     if (rec && (rec.package === name || rec.spec === name || k === name)) delete installed[k]
   }
   await writeState({ installed })
-  const where = res.cleaned.length > 0 ? res.cleaned.join(', ') : 'web'
-  return finishJob(job, { status: 'done', message: '已从 ' + where + ' 卸载 ' + name + '，重启 dsh 后生效' })
+  if (res.cleaned.length === 0) return finishJob(job, { status: 'done', message: '没在任何 profile 里找到 ' + name + '，已清除市场里的安装记录' })
+  return finishJob(job, { status: 'done', message: '已从 ' + res.cleaned.join(', ') + ' 卸载 ' + name + '，重启 dsh 后生效' })
 }
 
 function startRemove(args) {
@@ -648,7 +651,22 @@ function startAgentUninstall(args) {
   return { ok: true, job: job.id }
 }
 
-// 宿主 shell 服务封装（resolve → run，容错）
+// DSH 0.1.7 起 shell 服务只剩 resolve() + async execute()：execute 返回的句柄
+// 既是后台进程（readOutput/done/kill），也能 await result() 拿前台结果。
+// 旧版（≤0.1.6）的 start()/run() 作为兜底保留。
+export async function startSpec(shell, spec) {
+  if (typeof shell.execute === 'function') return await shell.execute(spec)
+  if (typeof shell.start === 'function') return shell.start(spec)
+  throw new TypeError('shell 服务既没有 execute 也没有 start')
+}
+
+export async function runSpec(shell, spec) {
+  if (typeof shell.execute === 'function') return await (await shell.execute(spec)).result()
+  if (typeof shell.run === 'function') return await shell.run(spec)
+  throw new TypeError('shell 服务既没有 execute 也没有 run')
+}
+
+// 宿主 shell 服务封装（resolve → execute，容错）
 // 注意：DSH shell 服务的 stdout/stderr 是 { text, truncated } 对象而非字符串；
 // 安装/卸载类命令需要越出会话工作区写用户目录，显式携带 danger-full-access
 // 沙箱策略（用户在弹窗点击安装即授权，等同于自己跑命令）。
@@ -675,14 +693,14 @@ async function runShell(command, timeoutMs, opts = {}) {
     return { ok: false, stdout: '', stderr: 'shell.resolve 失败: ' + String(e) }
   }
   try {
-    const result = await shell.run(spec)
+    const result = await runSpec(shell, spec)
     return {
       ok: result.exitCode === 0,
       stdout: (result.stdout && typeof result.stdout === 'object' && typeof result.stdout.text === 'string') ? result.stdout.text : String(result.stdout || ''),
       stderr: (result.stderr && typeof result.stderr === 'object' && typeof result.stderr.text === 'string') ? result.stderr.text : String(result.stderr || ''),
     }
   } catch (e) {
-    return { ok: false, stdout: '', stderr: 'shell.run 失败: ' + String(e) }
+    return { ok: false, stdout: '', stderr: 'shell.execute 失败: ' + String(e) }
   }
 }
 
@@ -738,8 +756,8 @@ function finishJob(job, { status, message, error, delegated }) {
   return { ok: status === 'done', message, error }
 }
 
-// 流式 shell 执行：start + 增量读输出，写入任务日志供进度弹窗轮询；
-// 同时累积完整输出（供失败分析/重试判定），带自有超时（start 不应用 timeout）。
+// 流式 shell 执行：execute + 增量读输出，写入任务日志供进度弹窗轮询；
+// 同时累积完整输出（供失败分析/重试判定），带自有超时兜底。
 async function runShellLogged(job, command, timeoutMs, opts = {}) {
   const shell = runShell.shellService
   if (!shell) {
@@ -769,10 +787,10 @@ async function runShellLogged(job, command, timeoutMs, opts = {}) {
   }
   let proc
   try {
-    proc = shell.start(spec)
+    proc = await startSpec(shell, spec)
   } catch (e) {
-    appendJobLine(job, 'shell.start 失败: ' + String(e))
-    return { ok: false, stdout: '', stderr: 'shell.start 失败: ' + String(e) }
+    appendJobLine(job, 'shell.execute 失败: ' + String(e))
+    return { ok: false, stdout: '', stderr: 'shell.execute 失败: ' + String(e) }
   }
   job.proc = proc
   let collected = ''

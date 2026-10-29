@@ -5953,7 +5953,7 @@ dsh web   # 重启后侧栏 Settings 旁常驻「插件市场」按钮
 - [dsh-scientific](https://github.com/Hongcheng-LI/dsh-scientific) Scientific computing plugin suite for DeepSeek Harness: literature (Zotero), molecular doc ⭐ 0 ⬇ 0 · 未验证
 - [dsh-okx-skill-hub](https://github.com/kongyecn-wq/dsh-okx-skill-hub) OKX agent-skills 官方技能适配 DeepSeek Harness (DSH) 技能库：skills 目录 + dsh-plugin 双通道安装 ⭐ 0 ⬇ 0
 - [challenge-project-methodology](https://github.com/hlxstc-create/challenge-project-methodology) A battle-tested methodology for high-difficulty AI-agent projects: grading gates, evidence ⭐ 0 ⬇ 0 · 未验证 · 手动安装
-- [dsh-plugin-agent-groups](https://github.com/flowfire/dsh-plugin-agent-groups) Relay final outputs between multiple live DSH sessions in one collaboration group. ⭐ 0 ⬇ 0 · 0.1.1
+- [dsh-plugin-agent-groups](https://github.com/flowfire/dsh-plugin-agent-groups) 把多个 DSH 会话组织成协作群，只转达每轮最终输出并按时间线合并投递。 ⭐ 0 ⬇ 0 · 0.1.1
 
 ## 工具与集成
 

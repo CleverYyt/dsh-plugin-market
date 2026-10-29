@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-28T08:40:25.737Z",
+  "updatedAt": "2026-10-29T06:20:59.017Z",
   "items": [
     {
       "id": "rea-agents",
@@ -348923,7 +348923,7 @@
       "type": "bundle",
       "repo": "flowfire/dsh-plugin-agent-groups",
       "spec": "github:flowfire/dsh-plugin-agent-groups#v0.1.1",
-      "description": "Relay final outputs between multiple live DSH sessions in one collaboration group.",
+      "description": "把多个 DSH 会话组织成协作群，只转达每轮最终输出并按时间线合并投递。",
       "longDescription": "把多个已打开的 DSH 会话组织成一个协作群：成员保留各自的上下文与角色设定，插件只采集每轮结束后的最终输出，按时间线排队，再合并投递。\n\n- 不手工转发，不插入打断正在运行的会话；\n- 成员忙时消息累积，空闲后一次性收到合并结果；\n- 只转发最终结论，工具调用与中间过程不会进入时间线；\n- 成员可输出【静默】跳过本轮，或输出【退出会话】离群；\n- 右侧栏可固定查看群时间线。",
       "category": "agent",
       "license": "MIT",
